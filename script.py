@@ -5,7 +5,7 @@ def main():
   from barcode.writer import ImageWriter
   from cv2 import imread, imshow, waitKey, destroyAllWindows
   number = input("ingresa 11 digitos: ")
-  barcode_format = barcode.get_barcode_class("upc")
+  barcode_format = barcode.get_barcode_class("code128")
   my_barcode = barcode_format(number, writer=ImageWriter())
   inpus = input("ingresa nombre del barcode(sin .png o .jpg) (la imagen es generada en .png): ")
   my_barcode.save(inpus)
